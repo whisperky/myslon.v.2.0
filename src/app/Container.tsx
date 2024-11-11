@@ -1,3 +1,5 @@
+import { Flex } from "@chakra-ui/react";
+
 export const Container = () => {
-  return <div>Container</div>;
+  return <Flex minH="100vh" backgroundColor="black"></Flex>;
 };

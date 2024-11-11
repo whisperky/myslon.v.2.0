@@ -24,7 +24,7 @@ export default function Home() {
   if (!isLoaded) return <Loading mode="dark" />;
 
   return (
-    <div className="w-full mx-auto p-0 overflow">
+    <div className="w-full mx-auto p-0 overflow albert-font">
       <Router>
         <Header />
         <Container />

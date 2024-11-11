@@ -4,12 +4,14 @@ import { ChakraProvider } from "@chakra-ui/react";
 
 import localFont from "next/font/local";
 import "./globals.css";
+import { Albert_Sans } from "next/font/google";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
 });
+
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
@@ -25,6 +27,11 @@ const marcellusSC = localFont({
     },
   ],
   variable: "--font-marcellus-sc",
+});
+
+const albertSans = Albert_Sans({
+  subsets: ["latin"],
+  variable: "--font-albert-sans",
 });
 
 const robotoCondensed = localFont({
@@ -52,7 +59,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${marcellusSC.variable} ${robotoCondensed.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${marcellusSC.variable} ${robotoCondensed.variable} ${albertSans.variable} antialiased`}
       >
         <ChakraProvider>{children}</ChakraProvider>
       </body>
