@@ -33,3 +33,7 @@ body {
 .roboto-font {
   font-family: var(--font-roboto-condensed);
 }
+
+.albert-font {
+  font-family: var(--font-albert-sans);
+}
