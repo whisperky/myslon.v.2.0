@@ -33,7 +33,8 @@ export const Header = () => {
       top="0"
       left="0"
       right="0"
-      zIndex={100}
+      zIndex={3}
+      bg="#121318"
       justifyContent="space-between"
       alignItems="center"
       mx="auto"
@@ -43,6 +44,15 @@ export const Header = () => {
         borderImage: "linear-gradient(to right, #000000, #EEA22D, #000000) 1",
       }}
     >
+      <Flex
+        position="absolute"
+        w="100%"
+        h="100%"
+        // bg="#46413c"
+        zIndex={1}
+        justifyContent="space-between"
+      />
+
       <Image src="img/logo.png" h="10" zIndex={1} />
       <Flex gap={6} alignItems="center" color="white" zIndex={1}>
         <Text color="white" fontSize="16px">
