@@ -1,8 +1,9 @@
 import React from "react";
-import Lottie from "lottie-react";
-import loadingJson from "@/public/nft_loading.json";
 import { Flex } from "@chakra-ui/react";
-import SmokeEffect from "../SmokeEffect";
+import Lottie from "lottie-react";
+
+// import SmokeEffect from "../SmokeEffect";
+import magicLoadingJson from "@/public/magic_loading.json";
 
 interface LoadingProps {
   mode: "dark" | "light";
@@ -14,17 +15,16 @@ const Loading = ({ mode }: LoadingProps) => {
       {mode === "dark" && (
         <Flex
           position="absolute"
+          bg="black"
           top="0"
           left="0"
           right="0"
           bottom="0"
           zIndex="0"
-        >
-          <SmokeEffect />
-        </Flex>
+        ></Flex>
       )}
       <Lottie
-        animationData={loadingJson}
+        animationData={magicLoadingJson}
         loop={true}
         className="w-72 h-72"
         autoplay={true}
