@@ -1,5 +1,10 @@
 import { Button, Flex, Image, Link, Text } from "@chakra-ui/react";
 
+import { TfiReddit } from "react-icons/tfi";
+import { RiDiscordLine } from "react-icons/ri";
+import { FaInstagram } from "react-icons/fa";
+import { motion } from "framer-motion";
+
 const BgGradient = () => {
   return (
     <svg
@@ -16,7 +21,7 @@ const BgGradient = () => {
     >
       <defs>
         <radialGradient id="headerGradient" cx="50%" cy="100%" r="100%">
-          <stop offset="0%" stopColor="#EEA22D55" />
+          <stop offset="0%" stopColor="#47403b99" />
           <stop offset="80%" stopColor="#00000000" />
         </radialGradient>
       </defs>
@@ -29,55 +34,96 @@ export const Header = () => {
   return (
     <Flex
       position="fixed"
-      w="70%"
-      top="0"
-      left="0"
-      right="0"
-      zIndex={3}
-      bg="#121318"
+      w="100%"
+      zIndex={5}
+      bg="#12131888"
+      backdropFilter="blur(10px)"
       justifyContent="space-between"
       alignItems="center"
-      mx="auto"
+      px="15%"
       py="4"
       borderBottom="2px solid transparent"
       sx={{
-        borderImage: "linear-gradient(to right, #000000, #EEA22D, #000000) 1",
+        borderImage:
+          "linear-gradient(to right, #121318 10%, #EEA22D 50%, #121318 90%) 1",
       }}
     >
-      <Flex
-        position="absolute"
-        w="100%"
-        h="100%"
-        // bg="#46413c"
-        zIndex={1}
-        justifyContent="space-between"
-      />
-
-      <Image src="img/logo.png" h="10" zIndex={1} />
-      <Flex gap={6} alignItems="center" color="white" zIndex={1}>
-        <Text color="white" fontSize="16px">
-          CHAPTERS
-        </Text>
-        <Flex gap={4}>
-          <Link href="/">
-            <Button variant="outline" color="white">
-              T
+      <Flex zIndex={1} w="100%" h="100%" justifyContent="space-between">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <Image src="img/logo.png" h="10" />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <Flex gap={6} alignItems="center" color="white" zIndex={1}>
+            <Link href="/">
+              <Text color="white" fontSize="16px">
+                CHAPTERS
+              </Text>
+            </Link>
+            <Flex gap={4}>
+              <Link href="/">
+                <Button
+                  variant="outline"
+                  color="white"
+                  border="1px solid #FFFFFF36"
+                  borderRadius="full"
+                  p="0"
+                  _hover={{
+                    bg: "white",
+                    color: "black",
+                  }}
+                >
+                  <FaInstagram />
+                </Button>
+              </Link>
+              <Link href="/">
+                <Button
+                  variant="outline"
+                  color="white"
+                  border="1px solid #FFFFFF36"
+                  borderRadius="full"
+                  p="0"
+                  _hover={{
+                    bg: "white",
+                    color: "black",
+                  }}
+                >
+                  <TfiReddit />
+                </Button>
+              </Link>
+              <Link href="/">
+                <Button
+                  variant="outline"
+                  color="white"
+                  border="1px solid #FFFFFF36"
+                  borderRadius="full"
+                  p="0"
+                  _hover={{
+                    bg: "white",
+                    color: "black",
+                  }}
+                >
+                  <RiDiscordLine />
+                </Button>
+              </Link>
+            </Flex>
+            <Button
+              variant="outline"
+              color="white"
+              border="1px solid #FFFFFF36"
+              _hover={{ bg: "white", color: "black" }}
+            >
+              Log in / Sign up
             </Button>
-          </Link>
-          <Link href="/">
-            <Button variant="outline" color="white">
-              R
-            </Button>
-          </Link>
-          <Link href="/">
-            <Button variant="outline" color="white">
-              D
-            </Button>
-          </Link>
-        </Flex>
-        <Button variant="outline" color="white">
-          Log in / Sign up
-        </Button>
+          </Flex>
+        </motion.div>
       </Flex>
 
       <BgGradient />
