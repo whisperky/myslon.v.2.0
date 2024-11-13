@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Flex, Text, Image, Grid, Button } from "@chakra-ui/react";
+import { Flex, Text, Image, Grid } from "@chakra-ui/react";
 import { GradButton } from "../Buttons";
 import { HomeHeroCard } from "../Cards";
 
@@ -60,8 +60,8 @@ export const LVContainer = () => {
       </Grid>
 
       <Text fontSize="16px" fontWeight="400" color="white" py={7}>
-        "The fate of the realm is in your hands! Who will claim the title of
-        Champion? Cast your vote now and decide the greatest hero!"
+        &quot;The fate of the realm is in your hands! Who will claim the title
+        of Champion? Cast your vote now and decide the greatest hero!&quot;
       </Text>
 
       <Grid templateColumns="repeat(3, 1fr)" gap={4} w="100%">

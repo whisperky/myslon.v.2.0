@@ -21,7 +21,7 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, []);
 
-  const [mode, setMode] = useState("light");
+  // const [mode, setMode] = useState("light");
 
   if (!isLoaded) return <Loading mode="dark" />;
 

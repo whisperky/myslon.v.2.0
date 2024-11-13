@@ -1,4 +1,4 @@
-import { Flex, Image, Button, Text, Grid } from "@chakra-ui/react";
+import { Flex, Image, Text, Grid } from "@chakra-ui/react";
 
 import { FButton, GradButton } from "@/components/Buttons";
 import { HomeChapterContainer } from "@/components/Containers";
