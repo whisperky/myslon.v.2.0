@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { Flex, IconButton, Image } from "@chakra-ui/react";
+import { Flex, IconButton } from "@chakra-ui/react";
 import { useSwipeable } from "react-swipeable";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 

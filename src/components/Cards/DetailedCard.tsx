@@ -1,6 +1,5 @@
 // components/DetailedCard.tsx
 import {
-  Box,
   Flex,
   Text,
   Icon,
@@ -71,7 +70,7 @@ export const DetailedCard: React.FC = () => {
           Latin words, consectetur, from a Lorem Ipsum passage, and going
           through the cites of the word in classical literature, discovered the
           undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
-          1.10.33 of "de Finibus Bonorum et Malorum"
+          1.10.33 of &quot;de Finibus Bonorum et Malorum&quot;
         </Text>
 
         {/* Call to Action Buttons */}
